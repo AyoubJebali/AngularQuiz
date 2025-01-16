@@ -2,6 +2,28 @@
 
 A full-stack quiz application built with Angular and Flask, featuring real-time scoring, leaderboards, and user authentication.
 
+## Screenshots
+
+### Home Page
+![Home Page](./screenshots/Home.png)
+*Home page interface*
+
+### Quiz Guide
+![Quiz Guide](./screenshots/guide.png)
+*Quiz Guide for users*
+
+### Quiz Interface
+![Quiz Interface](./screenshots/quiz.png)
+*Active quiz session with multiple-choice questions*
+
+### Quiz Results
+![Quiz Results](./screenshots/result.png)
+*Quiz Guide for users*
+
+### Leaderboard
+![Leaderboard](./screenshots/leaderboard.png)
+*Global leaderboard showing top scores*
+
 ## Features
 
 - 🔐 User authentication (login/register)
