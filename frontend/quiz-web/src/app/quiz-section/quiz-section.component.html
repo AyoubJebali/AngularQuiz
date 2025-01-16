@@ -1,0 +1,42 @@
+<section class="quiz-section" [class.active]="isQuizActive">
+  <div class="quiz-box " [class.active]="!ShowResults">
+    <h1>Quiz</h1>
+    <div class="quiz-header">
+      <span>Welcome to Quiz Game</span>
+      <span class="header-score">Score: {{ score*10 }} / {{totalQuestions*10}}</span>
+    </div>
+    <div class="question-text ">{{ question }}</div>
+    <div class="option-list">
+      <ul class="options">
+
+
+        @for (item of options; track $index) {
+
+        <li [className]="getOptionClass($index)" [class.disabled]="diableAllOptions" (click)="selectOption($index)">
+          <span>{{ item }}</span>
+        </li>
+
+
+        }
+      </ul>
+    </div>
+    <div class="quiz-footer">
+      <span class="question-total"> {{currentIndexOfQuestion}} of {{totalQuestions}}</span>
+      <button class="next-btn" [class.active]="btnActive" (click)="loadNextQuestion()">Next</button>
+    </div>
+    
+  </div>
+  <div class="result-box" [class.active]="ShowResults">
+    <h2>Quiz Result!</h2>
+    <div class="percentage-container">
+      <div class="circular-progress" [style.background]="getProgressStyle()">
+        <span class="progress-value">{{progressValue}}%</span>
+      </div>
+      <br>
+      <span class="score-text">Your Answered {{ score }} out of {{totalQuestions}} Questions</span>
+    </div>
+    <div class="buttons">
+      <button class="goHome-btn" (click)="finishQuiz()">Go To Home</button>
+    </div>
+  </div>
+</section>

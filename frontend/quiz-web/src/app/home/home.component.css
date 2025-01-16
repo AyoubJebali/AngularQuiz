@@ -1,0 +1,63 @@
+/* Home Section */
+
+
+/* Home Content */
+.home {
+    position: relative;
+    width: 100%; /* Make it take up full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playwrite AU SA", serif;
+}
+
+/* Home Content Inner */
+.home-content {
+    max-width: 600px;
+    width: 100%; /* Ensure the content is responsive */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; /* Center text inside */
+}
+
+/* Home Title */
+.home-content h1 {
+    color: #fff;
+    font-size: 78px;
+    font-weight: 700;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px; /* Add some margin below the title */
+}
+
+/* Home Paragraph */
+.home-content p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Start Button */
+.home-content .start-btn {
+    width: 190px;
+    height: 55px;
+    background: #AA2C86;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #AA2C86;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+/* Start Button Hover */
+.home-content .start-btn:hover {
+    background: transparent;
+    box-shadow: none;
+    color: #AA2C86; /* Change text color on hover */
+}

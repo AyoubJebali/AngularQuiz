@@ -1,0 +1,32 @@
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <h2>Connexion</h2>
+    
+            <form (ngSubmit)="onLogin()" #loginForm="ngForm" class="login-form">
+                <!-- Username -->
+                <div class="form-group">
+                    <label for="username">Username :</label>
+                    <input type="username" id="email" name="username" [(ngModel)]="username" class="form-control"
+                        placeholder="Entrez votre username" required />
+                </div>
+    
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control"
+                        placeholder="Entrez votre mot de passe" required />
+                </div>
+    
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid" >
+                    Se connecter
+                </button>
+            </form>
+    
+            <div class="register-link">
+                <p>Vous n'avez pas encore de compte ? <a (click)="navigateToRegister()">Inscrivez-vous ici</a></p>
+            </div>
+        </div>
+    </div>
+    </body>

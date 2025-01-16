@@ -1,0 +1,13 @@
+<div class="leaderboard-container">
+    <div class="leaderboard-card">
+      <h2>Leaderboard</h2>
+      <ul class="leaderboard-list">
+        @for (item of leaderboard; track $index) {
+        <li>{{ item.username }}
+            <span>{{ item.score }}</span>
+        </li>
+        }
+        
+      </ul>
+    </div>
+  </div>

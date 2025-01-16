@@ -1,0 +1,119 @@
+
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Conteneur du formulaire */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* Ombre légère pour ajouter du contraste */
+}
+
+/* Carte du formulaire */
+.login-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+    padding: 40px;
+    border-radius: 10px;
+   
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Titre du formulaire */
+h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Champ de saisie */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="username"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Focus des champs de saisie */
+input[type="username"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Bouton de soumission */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Lien d'inscription */
+.register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.register-link a {
+    color: #6e8efb;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #4c6efb;
+}

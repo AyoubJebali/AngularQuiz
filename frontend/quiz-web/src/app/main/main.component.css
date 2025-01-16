@@ -1,0 +1,24 @@
+/* Main Component */
+.main {
+    min-height: 100vh;
+    background: url('../assets/background2.jpg') no-repeat center center; 
+    background-size: cover;
+    pointer-events: auto;
+    transition: 2s ease;
+    height: 100%; /* Ensure the div takes the full height of the screen */
+}
+
+/* When .main has the 'active' class */
+.main.active {
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Full height */
+    width: 100%; /* Full width */
+}

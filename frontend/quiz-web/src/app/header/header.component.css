@@ -1,0 +1,78 @@
+/* Header Component */
+.header {
+    background-color: transparent; /* Ensure good contrast */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%; /* Removed percentage padding for better control */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-family: "Playwrite AU SA", serif;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem; /* Relative size */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px #09001d);
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.logo:hover {
+    color: #AA2C86; /* Subtle hover effect */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    gap: 1.5rem; /* Use gap to control spacing between links */
+    margin-left: auto; /* Push navbar to the right */
+    margin-right: 20%; /* Added margin-right for spacing */
+}
+
+/* Navbar Links */
+.navbar a {
+    font-size: 1rem; /* Use relative units */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s; /* Add transform for feedback */
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #AA2C86; /* Highlighted color */
+    transform: scale(1.1); /* Slight scale effect */
+}
+
+/* Focus Styles for Accessibility */
+.navbar a:focus {
+    outline: 2px dashed #AA2C86;
+    outline-offset: 4px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap; /* Allow wrapping */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Adjust size */
+    }
+
+    .navbar {
+        justify-content: center; /* Center navbar links on small screens */
+        gap: 1rem; /* Reduce gap */
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* Adjust size */
+    }
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "name": "Science",
+    "description": "Questions related to physics, chemistry, biology, and general science.",
+    "questions": [
+      { "question": "What is the chemical symbol for water?", "options": ["H2O", "CO2", "O2"], "correctIndex": 0 },
+      { "question": "What planet is known as the Red Planet?", "options": ["Venus", "Mars", "Jupiter"], "correctIndex": 1 },
+      { "question": "What is the speed of light?", "options": ["300,000 km/s", "150,000 km/s", "500,000 km/s"], "correctIndex": 0 },
+      { "question": "What gas do plants primarily absorb for photosynthesis?", "options": ["Oxygen", "Carbon Dioxide", "Nitrogen"], "correctIndex": 1 },
+      { "question": "What is the powerhouse of the cell?", "options": ["Nucleus", "Mitochondria", "Ribosome"], "correctIndex": 1 },
+      { "question": "What force keeps planets in orbit?", "options": ["Magnetism", "Gravity", "Friction"], "correctIndex": 1 },
+      { "question": "What is the primary component of the sun?", "options": ["Helium", "Hydrogen", "Carbon"], "correctIndex": 1 },
+      { "question": "What is the largest organ in the human body?", "options": ["Heart", "Liver", "Skin"], "correctIndex": 2 },
+      { "question": "What is the boiling point of water at sea level?", "options": ["100°C", "90°C", "110°C"], "correctIndex": 0 },
+      { "question": "What type of blood cells help fight infections?", "options": ["Red", "White", "Platelets"], "correctIndex": 1 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "History",
+    "description": "Explore events and figures from ancient to modern history.",
+    "questions": [
+      { "question": "Who was the first President of the United States?", "options": ["George Washington", "Abraham Lincoln", "Thomas Jefferson"], "correctIndex": 0 },
+      { "question": "In what year did World War II end?", "options": ["1945", "1939", "1950"], "correctIndex": 0 },
+      { "question": "Who discovered America?", "options": ["Christopher Columbus", "Leif Erikson", "Vasco da Gama"], "correctIndex": 0 },
+      { "question": "Who was the first emperor of China?", "options": ["Qin Shi Huang", "Liu Bang", "Wang Mang"], "correctIndex": 0 },
+      { "question": "In which year did the Titanic sink?", "options": ["1912", "1905", "1898"], "correctIndex": 0 },
+      { "question": "What event triggered World War I?", "options": ["Assassination of Archduke Franz Ferdinand", "Invasion of Poland", "Attack on Pearl Harbor"], "correctIndex": 0 },
+      { "question": "Who was the leader of the Soviet Union during World War II?", "options": ["Joseph Stalin", "Leon Trotsky", "Nikita Khrushchev"], "correctIndex": 0 },
+      { "question": "Which empire was known for its legions?", "options": ["Roman Empire", "Ottoman Empire", "British Empire"], "correctIndex": 0 },
+      { "question": "Who was the famous queen of ancient Egypt?", "options": ["Cleopatra", "Nefertiti", "Hatshepsut"], "correctIndex": 0 },
+      { "question": "Who wrote the Declaration of Independence?", "options": ["Thomas Jefferson", "George Washington", "Benjamin Franklin"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Geography",
+    "description": "Test your knowledge about countries, capitals, and landmarks.",
+    "questions": [
+      { "question": "What is the capital of Japan?", "options": ["Beijing", "Seoul", "Tokyo"], "correctIndex": 2 },
+      { "question": "Which country is known as the Land of the Rising Sun?", "options": ["China", "Japan", "India"], "correctIndex": 1 },
+      { "question": "What is the longest river in the world?", "options": ["Amazon", "Nile", "Yangtze"], "correctIndex": 1 },
+      { "question": "Which country has the largest population?", "options": ["India", "United States", "China"], "correctIndex": 2 },
+      { "question": "Which ocean is the largest?", "options": ["Atlantic", "Indian", "Pacific"], "correctIndex": 2 },
+      { "question": "Which country is both an island and a continent?", "options": ["Australia", "India", "Greenland"], "correctIndex": 0 },
+      { "question": "In which country can you find the Great Pyramid of Giza?", "options": ["Greece", "Egypt", "Italy"], "correctIndex": 1 },
+      { "question": "Which city is known as the City of Lights?", "options": ["Paris", "London", "New York"], "correctIndex": 0 },
+      { "question": "What is the largest desert in the world?", "options": ["Sahara", "Arctic", "Gobi"], "correctIndex": 1 },
+      { "question": "What is the capital city of Canada?", "options": ["Vancouver", "Ottawa", "Toronto"], "correctIndex": 1 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sports",
+    "description": "Questions about various sports, athletes, and tournaments.",
+    "questions": [
+      { "question": "Who holds the record for the most goals in football?", "options": ["Cristiano Ronaldo", "Lionel Messi", "Pele"], "correctIndex": 0 },
+      { "question": "Which country hosted the 2016 Summer Olympics?", "options": ["Brazil", "United Kingdom", "China"], "correctIndex": 0 },
+      { "question": "What sport is played at Wimbledon?", "options": ["Football", "Basketball", "Tennis"], "correctIndex": 2 },
+      { "question": "Who won the FIFA World Cup in 2018?", "options": ["Germany", "Brazil", "France"], "correctIndex": 2 },
+      { "question": "Which sport is Michael Jordan associated with?", "options": ["Football", "Tennis", "Basketball"], "correctIndex": 2 },
+      { "question": "Who is known as the fastest man in the world?", "options": ["Usain Bolt", "Michael Phelps", "Tyson Gay"], "correctIndex": 0 },
+      { "question": "What sport involves hitting a shuttlecock back and forth?", "options": ["Badminton", "Tennis", "Table Tennis"], "correctIndex": 0 },
+      { "question": "What team won the Super Bowl in 2020?", "options": ["San Francisco 49ers", "Kansas City Chiefs", "New England Patriots"], "correctIndex": 1 },
+      { "question": "Which country has won the most Rugby World Cups?", "options": ["New Zealand", "South Africa", "Australia"], "correctIndex": 0 },
+      { "question": "What is the national sport of Canada?", "options": ["Hockey", "Lacrosse", "Football"], "correctIndex": 1 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Technology",
+    "description": "Quiz yourself on programming, gadgets, and technological advancements.",
+    "questions": [
+      { "question": "Who is the founder of Microsoft?", "options": ["Steve Jobs", "Bill Gates", "Mark Zuckerberg"], "correctIndex": 1 },
+      { "question": "What does the acronym 'HTML' stand for?", "options": ["HyperText Markup Language", "HyperText Machine Language", "HighText Markup Language"], "correctIndex": 0 },
+      { "question": "Which company created the iPhone?", "options": ["Samsung", "Apple", "Nokia"], "correctIndex": 1 },
+      { "question": "What programming language is known for its snake logo?", "options": ["Java", "Python", "Ruby"], "correctIndex": 1 },
+      { "question": "Which social media platform did Mark Zuckerberg create?", "options": ["Instagram", "Facebook", "Twitter"], "correctIndex": 1 },
+      { "question": "What does 'HTTP' stand for?", "options": ["HyperText Transfer Protocol", "HyperText Test Protocol", "HyperText Transmission Protocol"], "correctIndex": 0 },
+      { "question": "Which company developed the first personal computer?", "options": ["IBM", "Apple", "Microsoft"], "correctIndex": 0 },
+      { "question": "What does 'Wi-Fi' stand for?", "options": ["Wireless Fidelity", "Wide Frequency", "World Interconnected"], "correctIndex": 0 },
+      { "question": "What is the name of the first video game?", "options": ["Pong", "Space Invaders", "Pac-Man"], "correctIndex": 0 },
+      { "question": "What is the name of the virtual assistant developed by Amazon?", "options": ["Siri", "Cortana", "Alexa"], "correctIndex": 2 }
+    ]
+  }
+]

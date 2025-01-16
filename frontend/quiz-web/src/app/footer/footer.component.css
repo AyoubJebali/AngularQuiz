@@ -1,0 +1,62 @@
+/* Footer Styling */
+.footer {
+    background-color: #09001d; /* Dark background for contrast */
+    color: #fff; /* White text for readability */
+    padding: 30px 20px; /* Add padding for spacing */
+    text-align: center; /* Center align the content */
+    position: relative;
+    bottom: 0;
+    
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between icons */
+  }
+  
+  .social-icons li {
+    display: inline;
+  }
+  
+  .icon-link {
+    font-size: 18px; /* Icon size */
+    color: #fff; /* Icon color */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .icon-link:hover {
+    color: #AA2C86; /* Hover color */
+    transform: scale(1.1); /* Slight scale effect on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-content {
+      padding: 20px; /* Less padding on small screens */
+    }
+  
+    .footer p {
+      font-size: 12px; /* Adjust text size */
+    }
+  
+    .social-icons {
+      gap: 15px; /* Less spacing between icons */
+    }
+  }
+  

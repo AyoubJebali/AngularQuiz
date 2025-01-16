@@ -1,0 +1,124 @@
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Conteneur principal */
+.register-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titre */
+.register-container h2 {
+    font-size: 1.8rem;
+    color: #6e8efb;
+    margin-bottom: 20px;
+}
+
+/* Champs de formulaire */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #6e8efb;
+    outline: none;
+}
+
+/* Bouton d'inscription */
+.btn-primary {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #5c7cfb, #925fe3);
+}
+
+/* Lien vers la page de connexion */
+.login-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.login-link a {
+    color: #6e8efb;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #4c6efb;
+}
+
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 20px 30px;
+    }
+
+    .register-container h2 {
+        font-size: 1.5rem;
+    }
+}

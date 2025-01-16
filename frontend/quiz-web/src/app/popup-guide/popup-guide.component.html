@@ -1,0 +1,12 @@
+<div class="popup-info" [class.active]="isVisible">
+  <h2>Quiz Rules</h2>
+        <span class="info">1. You cannot skip any questions.</span>
+        <span class="info">2. Once attempt any question, you cannot go to previous question.</span>
+        <span class="info">3. After one answer is selected, other option will be disabled.</span>
+        <span class="info">4. You will be given total 5 questions.</span>
+        <span class="info">5. Concentrate on your Quiz, Don't try to cheat.</span>
+  <div class="btn-group">
+    <button class="info-btn" (click)="toggleVisibility()">Exit</button>
+    <button class="info-btn" (click)="toggleQuizActive()">Continue</button>
+  </div>
+</div>
