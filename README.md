@@ -5,7 +5,7 @@ A full-stack quiz application built with Angular and Flask, featuring real-time 
 ## Screenshots
 
 ### Home Page
-![Home Page](./screenshots/Home.png)
+![Home Page](./screenshots/home.png)
 *Home page interface*
 
 ### Quiz Guide
