@@ -1,0 +1,18 @@
+# Node.js (Frontend)
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# Python (Backend)
+venv/
+__pycache__/
+*.pyc
+instance/
+.env
+
+# General
+.DS_Store
+.idea/
+.vscode/
+*.log
