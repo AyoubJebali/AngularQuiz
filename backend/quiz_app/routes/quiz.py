@@ -3,9 +3,17 @@ from flask_login import login_required, current_user
 from ..models.models import User, db
 import json
 import random 
+import os
 
 bp = Blueprint('quiz_blueprint', __name__)
-path = 'C:\\Users\\ayoub\Desktop\\angularProj\\PyhtonBackend\\quiz_app\\quizzes.json'
+# Get the absolute path to the directory where your script is located
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Build the absolute path to quizzes.json one level up
+json_path = os.path.join(base_dir, '..', 'quizzes.json')
+
+# Normalize the path (resolves ../ properly)
+path = os.path.normpath(json_path)
 # Load quiz categories and questions from the JSON file
 def load_quiz_data(file_path):
     try:
