@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify,request
+from flask import Blueprint, jsonify,request,current_app
 from flask_login import login_required, current_user
 from ..models.models import User, db
 import json
@@ -38,8 +38,8 @@ def get_quizzes():
         return jsonify({"error": "Category IDs are required"}), 400
     # Convert the category_ids string into a list of integers
     category_ids = list(map(int, category_ids.split(',')))
-    print(category_ids)
-    
+    #print(category_ids)
+    current_app.logger.info(f"Requested category IDs: {category_ids}")
     # Load quiz data from the JSON file
     data = load_quiz_data(path)
 
@@ -80,6 +80,7 @@ def get_quizzes():
 @bp.route('/leaderboard', methods=['GET'])
 def get_leaderboard():
     users = User.query.order_by(User.total_score.desc()).limit(10).all()
+    current_app.logger.info("Leaderboard data requested.")
     return jsonify([{
         'username': user.username,
         'score': user.total_score,
@@ -91,4 +92,5 @@ def save_score():
     user = User.query.filter_by(username=data['username']).first()
     user.total_score += data['score']
     db.session.commit()
+    current_app.logger.info(f"Score {data['score']} saved for user {data['username']}.")
     return jsonify({'message': 'Score saved successfully'}), 200
