@@ -1,4 +1,6 @@
 # Node modules
+# Uncomment the line below if you need to copy node_modules into Docker
+# (e.g., in restricted network environments where npm install fails)
 node_modules
 npm-debug.log
 yarn-error.log

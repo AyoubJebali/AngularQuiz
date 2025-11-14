@@ -7,13 +7,16 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
+# Note: If you have npm install issues in restricted environments,
+# you can pre-install node_modules locally and uncomment node_modules
+# in .dockerignore, then the COPY . . below will include them
+RUN npm ci --legacy-peer-deps || npm install --legacy-peer-deps
 
-# Copy the rest of the application
+# Copy the rest of the application (including node_modules if npm install failed)
 COPY . .
 
 # Build the Angular app for production
-RUN npm run build
+RUN ./node_modules/.bin/ng build --configuration production
 
 # Stage 2: Serve the application with nginx
 FROM nginx:alpine
