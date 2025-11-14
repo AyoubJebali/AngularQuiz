@@ -1,0 +1,28 @@
+# Node modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build output
+dist
+.angular/cache
+
+# IDE and editor files
+.idea
+.vscode
+*.sublime-workspace
+*.launch
+.settings
+.c9
+
+# Testing
+coverage
+*.log
+testem.log
+
+# Misc
+.DS_Store
+Thumbs.db
+.git
+.gitignore
+README.md

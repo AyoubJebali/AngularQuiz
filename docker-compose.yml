@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend/quiz-web
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+    container_name: quiz-frontend
+    depends_on:
+      - backend
+    networks:
+      - quiz-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    container_name: quiz-backend
+    environment:
+      - FLASK_ENV=development
+    networks:
+      - quiz-network
+
+networks:
+  quiz-network:
+    driver: bridge
