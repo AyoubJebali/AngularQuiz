@@ -63,16 +63,23 @@ docker-compose down
 
 ### Network Issues During Build
 
-If you experience network connectivity issues during `npm install` in the Docker build:
+If you experience network connectivity issues during `npm install` in the Docker build (common in CI/CD environments or corporate networks):
+
+**Solution:** Use local node_modules
 
 1. Install dependencies locally first:
    ```bash
    npm install
    ```
 
-2. Comment out `node_modules` in `.dockerignore`:
-   ```
-   # node_modules
+2. Edit `.dockerignore` and comment out the `node_modules` line:
+   ```diff
+   # Node modules
+   # Comment out the line below if you need to copy node_modules into Docker
+   # (e.g., in restricted network environments where npm install fails)
+   - node_modules
+   + # node_modules
+   npm-debug.log
    ```
 
 3. Rebuild the Docker image:
@@ -80,7 +87,7 @@ If you experience network connectivity issues during `npm install` in the Docker
    docker build -t quiz-frontend .
    ```
 
-This will copy your local `node_modules` into the Docker image, bypassing the need for network access during the build.
+This will copy your local `node_modules` into the Docker image, bypassing the need for network access during the build. Note that this increases the build context size but ensures reliable builds in restricted environments.
 
 ### Production Build Issues
 
