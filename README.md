@@ -55,11 +55,60 @@ A full-stack quiz application built with Angular and Flask, featuring real-time 
     cd quiz-game
     ```
 
+## Running with Docker (Recommended)
+
+The easiest way to run the application is using Docker:
+
+### Prerequisites
+- Docker installed on your system
+- Docker Compose installed (usually included with Docker Desktop)
+
+### Quick Start with Docker Compose
+
+Run both frontend and backend services with a single command:
+
+```bash
+docker-compose up --build
+```
+
+This will:
+- Build the Angular frontend and serve it on `http://localhost:4200`
+- Build and start the Flask backend on `http://localhost:5000`
+
+To run in detached mode (background):
+
+```bash
+docker-compose up -d --build
+```
+
+To stop the services:
+
+```bash
+docker-compose down
+```
+
+### Running Frontend Container Only
+
+If you only want to run the frontend:
+
+```bash
+# Build the Docker image
+cd frontend/quiz-web
+docker build -t quiz-frontend .
+
+# Run the container
+docker run -p 4200:80 quiz-frontend
+```
+
+Access the application at `http://localhost:4200`
+
+## Manual Installation (Alternative)
+
 ### Frontend Setup
 
 2. Navigate to the frontend directory and install dependencies:
     ```bash
-    cd frontend
+    cd frontend/quiz-web
     npm install
     ```
 
@@ -72,7 +121,7 @@ A full-stack quiz application built with Angular and Flask, featuring real-time 
 
 4. Navigate to the backend directory and create a virtual environment:
     ```bash
-    cd ../backend
+    cd backend
     python -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
