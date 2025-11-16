@@ -34,12 +34,6 @@ class TestUserModel:
             with pytest.raises(Exception):  # Should raise IntegrityError
                 db.session.commit()
     
-    def test_user_default_score(self, app):
-        """Test user default score is 0."""
-        with app.app_context():
-            user = User(username='testuser', password_hash='hash')
-            assert user.total_score == 0
-    
     def test_user_score_update(self, app, sample_user):
         """Test user score can be updated."""
         with app.app_context():

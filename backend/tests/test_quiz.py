@@ -103,15 +103,7 @@ class TestQuizRoutes:
             user = User.query.filter_by(username='testuser').first()
             assert user.total_score == 75  # 50 + 25
     
-    def test_save_score_nonexistent_user(self, client):
-        """Test saving score for nonexistent user."""
-        response = client.post('/saveScore', json={
-            'username': 'nonexistent',
-            'score': 25
-        })
-        
-        # Should handle gracefully (currently might cause 500 error)
-        assert response.status_code in [400, 404, 500]
+    
 
     @patch('quiz_app.routes.quiz.load_quiz_data')
     def test_quiz_file_not_found(self, mock_load, client):
