@@ -14,14 +14,17 @@ def configure_cors(app):
     Returns:
         CORS: Configured CORS instance
     """
-    return CORS(app, resources={
-        r"/*": {
-            "origins": ["http://localhost:4200"],  # Angular dev server
-            "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-            "allow_headers": ["Content-Type", "Authorization"],
-            "supports_credentials": True
-        }
-    })
+    return CORS(
+        app,
+        resources={
+            r"/*": {
+                "origins": ["http://localhost:4200"],  # Angular dev server
+                "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+                "allow_headers": ["Content-Type", "Authorization"],
+                "supports_credentials": True,
+            }
+        },
+    )
 
 
 def initialize_database(app):
@@ -45,8 +48,8 @@ def main():
     initialize_database(app)
 
     # Run the application
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
