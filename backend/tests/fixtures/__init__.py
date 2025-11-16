@@ -7,7 +7,4 @@ different test modules to ensure consistent test data.
 from .test_data import SAMPLE_QUIZ_DATA, SAMPLE_USERS
 
 # Make it easy to import test data from anywhere in tests
-__all__ = [
-    'SAMPLE_QUIZ_DATA',
-    'SAMPLE_USERS'
-]
+__all__ = ["SAMPLE_QUIZ_DATA", "SAMPLE_USERS"]

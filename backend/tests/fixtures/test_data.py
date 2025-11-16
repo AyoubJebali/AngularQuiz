@@ -8,15 +8,15 @@ SAMPLE_QUIZ_DATA = [
             {
                 "question": "What is the capital of France?",
                 "options": ["London", "Berlin", "Paris", "Madrid"],
-                "correctIndex": 2
+                "correctIndex": 2,
             },
             {
                 "question": "What is 2 + 2?",
                 "options": ["3", "4", "5", "6"],
-                "correctIndex": 1
+                "correctIndex": 1,
             },
             # Add more questions to reach 10+
-        ]
+        ],
     },
     {
         "id": 2,
@@ -25,11 +25,11 @@ SAMPLE_QUIZ_DATA = [
             {
                 "question": "What is the chemical symbol for water?",
                 "options": ["H2O", "CO2", "NaCl", "O2"],
-                "correctIndex": 0
+                "correctIndex": 0,
             },
             # Add more questions
-        ]
-    }
+        ],
+    },
 ]
 
 SAMPLE_USERS = [
