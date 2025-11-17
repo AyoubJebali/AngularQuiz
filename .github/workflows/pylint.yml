@@ -20,4 +20,5 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint backend/ --ignore-paths=backend/venv --rcfile=.pylintrc
+        cd backend
+        pylint . --ignore-paths=venv --rcfile=.pylintrc
