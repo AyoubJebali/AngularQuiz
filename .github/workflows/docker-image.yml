@@ -41,12 +41,12 @@ jobs:
           docker compose version
     - name: Build with Docker Compose
       run: |
-        docker-compose build
+        docker compose build
     - name: Test Docker Compose
       run: |
-        docker-compose up -d
+        docker compose up -d
         sleep 30
         # Basic health check
         curl -f http://localhost:4200 || exit 1
         curl -f http://localhost:5000 || exit 1
-        docker-compose down
+        docker compose down
