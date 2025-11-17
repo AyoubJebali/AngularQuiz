@@ -1,6 +1,5 @@
 """Helper functions for testing the quiz application."""
 
-import json
 from werkzeug.security import generate_password_hash
 from quiz_app.models.models import User
 from quiz_app import db
