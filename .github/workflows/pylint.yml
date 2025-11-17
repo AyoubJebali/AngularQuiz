@@ -21,4 +21,4 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         cd backend
-        pylint . --ignore-paths=venv --rcfile=.pylintrc
+        pylint . --ignore-paths=venv --rcfile=.pylintrc --fail-under=8.0
