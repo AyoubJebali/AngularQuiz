@@ -7,12 +7,39 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-  build:
-
+  build-frontend:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Build Frontend Docker image
+      run: |
+        cd frontend/quiz-web
+        docker build . --file Dockerfile --tag quiz-frontend:$(date +%s)
+        docker build . --file Dockerfile --tag quiz-frontend:latest
+
+  build-backend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build Backend Docker image
+      run: |
+        cd backend
+        docker build . --file Dockerfile --tag quiz-backend:$(date +%s)
+        docker build . --file Dockerfile --tag quiz-backend:latest
+
+  build-with-compose:
+    runs-on: ubuntu-latest
+    needs: [build-frontend, build-backend]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build with Docker Compose
+      run: |
+        docker-compose build
+    - name: Test Docker Compose
+      run: |
+        docker-compose up -d
+        sleep 30
+        # Basic health check
+        curl -f http://localhost:4200 || exit 1
+        curl -f http://localhost:5000 || exit 1
+        docker-compose down
